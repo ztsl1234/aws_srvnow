@@ -1,0 +1,6 @@
+{
+  "source_path": "s3://my-sn-drop-zone/sc_req_item.csv",
+  "target_path": "s3://my-sn-bronze-partitioned/service_now_data/",
+  "database_name": "service_now_db",
+  "table_name": "onboarding_trends"
+}
