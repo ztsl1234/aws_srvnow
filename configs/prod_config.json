@@ -1,0 +1,5 @@
+{
+  "source_s3_path": "s3://sn-raw-data-tsl-prod/servicenow/",
+  "target_s3_path": "s3://sn-bronze-data-tsl-prod/servicenow/",
+  "partition_column": "sys_created_on_date"
+}

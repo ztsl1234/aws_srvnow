@@ -1,0 +1,12 @@
+image: python:3.10
+
+pipelines:
+  branches:
+    main:
+      - step:
+          name: Deploy ETL Scripts to S3
+          script:
+            - pip install awscli
+            - aws s3 sync ./src s3://your-meta-bucket/scripts/
+            - aws s3 sync ./configs s3://your-meta-bucket/configs/
+          deployment: production

@@ -1,6 +1,5 @@
 {
-  "source_path": "s3://my-sn-drop-zone/sc_req_item.csv",
-  "target_path": "s3://my-sn-bronze-partitioned/service_now_data/",
-  "database_name": "service_now_db",
-  "table_name": "onboarding_trends"
+  "source_s3_path": "s3://sn-raw-data-tsl-dev/servicenow/",
+  "target_s3_path": "s3://sn-bronze-data-tsl-dev/servicenow/",
+  "partition_column": "sys_created_on_date"
 }

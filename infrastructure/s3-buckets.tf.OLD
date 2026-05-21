@@ -14,13 +14,6 @@ resource "aws_s3_bucket" "meta_bucket" {
   bucket = "sn-meta-data-tsl"
 }
 
-# --- Standard Security: Enable Versioning for Meta/Scripts ---
-resource "aws_s3_bucket_versioning" "meta_versioning" {
-  bucket = aws_s3_bucket.meta_bucket.id
-  versioning_configuration {
-    status = "Enabled"
-  }
-}
 
 # --- Block Public Access (Required for Enterprise compliance) ---
 resource "aws_s3_bucket_public_access_block" "all_buckets" {
@@ -49,5 +42,12 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "encryption" {
     apply_server_side_encryption_by_default {
       sse_algorithm = "AES256"
     }
+  }
+}
+# --- Standard Security: Enable Versioning for Meta/Scripts ---
+resource "aws_s3_bucket_versioning" "meta_versioning" {
+  bucket = aws_s3_bucket.meta_bucket.id
+  versioning_configuration {
+    status = "Enabled"
   }
 }
