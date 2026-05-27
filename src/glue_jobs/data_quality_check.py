@@ -13,7 +13,7 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-config_path = f"s3://sn-meta-data-sl-{args['ENV']}/configs/{args['ENV']}_config.json"
+config_path = f"s3://sn-meta-data-tsl-{args['ENV']}/configs/{args['ENV']}_config.json"
 job_config = load_s3_json_config(config_path)
 target_path = job_config["target_s3_path"]
 

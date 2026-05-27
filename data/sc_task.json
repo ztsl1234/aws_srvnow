@@ -1,0 +1,44 @@
+[
+    {
+      "sys_id": "9c8b7a6f5e4d3c2b1a0f9e8d7c6b5a4u",
+      "number": "SCTASK0010241",
+      "request_item": { "display_value": "RITM0054321", "link": "https://instance.service-now.com/api/now/table/sc_req_item/8a9f02b34f112110c7348ab18310c7a1", "value": "8a9f02b34f112110c7348ab18310c7a1" },
+      "short_description": "Provision Corporate Laptop Hardware",
+      "assignment_group": { "display_value": "IT Logistics SG", "link": "https://instance.service-now.com/api/now/table/sys_user_group/ab12cd34ef567890ab12cd34ef567890", "value": "ab12cd34ef567890ab12cd34ef567890" },
+      "assigned_to": { "display_value": "John Tan", "value": "usr_jtan331" },
+      "priority": "2",
+      "state": "3",
+      "sys_created_on": "2026-05-20 01:05:00",
+      "sys_updated_on": "2026-05-22 06:30:00",
+      "closed_at": "2026-05-22 06:30:00",
+      "time_worked": ""
+    },
+    {
+      "sys_id": "11223344556677889900aabbccddeeff",
+      "number": "SCTASK0010242",
+      "request_item": { "display_value": "RITM0054321", "link": "https://instance.service-now.com/api/now/table/sc_req_item/8a9f02b34f112110c7348ab18310c7a1", "value": "8a9f02b34f112110c7348ab18310c7a1" },
+      "short_description": "Configure Active Directory & Email Access",
+      "assignment_group": { "display_value": "Identity & Access Management", "link": "https://instance.service-now.com/api/now/table/sys_user_group/feea99887766554433221100abcdef12", "value": "feea99887766554433221100abcdef12" },
+      "assigned_to": "",
+      "priority": "3",
+      "state": "3",
+      "sys_created_on": "2026-05-20 01:05:00",
+      "sys_updated_on": "2026-05-21 04:12:00",
+      "closed_at": "2026-05-21 04:12:00",
+      "time_worked": ""
+    },
+    {
+      "sys_id": "aabbccddeeff11223344556677889900",
+      "number": "SCTASK0010243",
+      "request_item": { "display_value": "RITM0054322", "link": "https://instance.service-now.com/api/now/table/sc_req_item/3f2e1d0c4b5a6f7e8d9c0b1a2f3e4d5c", "value": "3f2e1d0c4b5a6f7e8d9c0b1a2f3e4d5c" },
+      "short_description": "Provision AWS Sandbox Infrastructure Environment",
+      "assignment_group": { "display_value": "Cloud DevOps Team", "link": "https://instance.service-now.com/api/now/table/sys_user_group/ccddbbaaccddbbaaccddbbaaccddbbaa", "value": "ccddbbaaccddbbaaccddbbaaccddbbaa" },
+      "assigned_to": { "display_value": "Kumar Raja", "value": "usr_kraja77" },
+      "priority": "3",
+      "state": "2",
+      "sys_created_on": "2026-05-25 02:20:00",
+      "sys_updated_on": "2026-05-27 00:00:00",
+      "closed_at": "",
+      "time_worked": "7200"
+    }
+  ]

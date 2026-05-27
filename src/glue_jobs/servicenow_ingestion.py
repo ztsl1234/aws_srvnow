@@ -8,6 +8,8 @@ from awsglue.job import Job
 from utils.spark_utils import flatten_structs
 from utils.config_utils import load_s3_json_config
 
+from pyspark.sql.functions import col, to_date
+
 args = getResolvedOptions(sys.argv, ['JOB_NAME', 'ENV'])
 
 sc = SparkContext()
@@ -16,7 +18,7 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-config_path = f"s3://sn-meta-data-sl-{args['ENV']}/configs/{args['ENV']}_config.json"
+config_path = f"s3://sn-meta-data-tsl-{args['ENV']}/configs/{args['ENV']}_config.json"
 job_config = load_s3_json_config(config_path)
 
 source_path = job_config["source_s3_path"]
@@ -29,6 +31,14 @@ if raw_df.rdd.isEmpty():
     print("Ingestion Target Landing Zone clean. No records detected.")
     job.commit()
     sys.exit(0)
+
+
+# ==========================================
+# ADDED: Derive missing partition column
+# ==========================================
+if partition_col == "sys_created_on_date" and "sys_created_on_date" not in raw_df.columns:
+    raw_df = raw_df.withColumn("sys_created_on_date", to_date(col("sys_created_on")))
+# ==========================================
 
 flattened_df = flatten_structs(raw_df)
 

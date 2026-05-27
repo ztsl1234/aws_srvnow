@@ -15,9 +15,11 @@ cd shared-libs
 if [ ! -d "venv" ]; then
     python3 -m venv venv
 fi
-source venv/bin/activate
+source venv/Scripts/activate
 pip install --upgrade pip setuptools wheel --quiet
-python setup.py bdist_wheel --quiet
+#python setup.py bdist_wheel --quiet
+python -m build --wheel
+
 deactivate
 cd ..
 

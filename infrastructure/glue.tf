@@ -29,12 +29,12 @@ resource "aws_iam_policy" "glue_s3_access" {
           "s3:ListBucket"
         ]
         Resource = [
-          "arn:aws:s3:::sn-raw-data-sl-${var.environment}",
-          "arn:aws:s3:::sn-raw-data-sl-${var.environment}/*",
-          "arn:aws:s3:::sn-bronze-data-sl-${var.environment}",
-          "arn:aws:s3:::sn-bronze-data-sl-${var.environment}/*",
-          "arn:aws:s3:::sn-meta-data-sl-${var.environment}",
-          "arn:aws:s3:::sn-meta-data-sl-${var.environment}/*"
+          "arn:aws:s3:::sn-raw-data-tsl-${var.environment}",
+          "arn:aws:s3:::sn-raw-data-tsl-${var.environment}/*",
+          "arn:aws:s3:::sn-bronze-data-tsl-${var.environment}",
+          "arn:aws:s3:::sn-bronze-data-tsl-${var.environment}/*",
+          "arn:aws:s3:::sn-meta-data-tsl-${var.environment}",
+          "arn:aws:s3:::sn-meta-data-tsl-${var.environment}/*"
         ]
       },
       {
@@ -78,7 +78,7 @@ resource "aws_glue_job" "servicenow_ingestion" {
     "--job-language"                     = "python"
     "--continuous-log-logGroup"          = "/aws-glue/jobs/data-platform-${var.environment}"
     "--enable-continuous-cloudwatch-log" = "true"
-    "--extra-py-files"                   = "s3://sn-meta-data-sl-${var.environment}/libraries/shared_utils-1.0.0-py3-none-any.whl"
+    "--extra-py-files"                   = "s3://sn-meta-data-tsl-${var.environment}/libraries/shared_utils-1.0.0-py3-none-any.whl"
     "--ENV"                              = var.environment
   }
 }
@@ -101,7 +101,7 @@ resource "aws_glue_job" "data_quality_check" {
     "--job-language"                     = "python"
     "--continuous-log-logGroup"          = "/aws-glue/jobs/data-platform-dq-${var.environment}"
     "--enable-continuous-cloudwatch-log" = "true"
-    "--extra-py-files"                   = "s3://sn-meta-data-sl-${var.environment}/libraries/shared_utils-1.0.0-py3-none-any.whl"
+    "--extra-py-files"                   = "s3://sn-meta-data-tsl-${var.environment}/libraries/shared_utils-1.0.0-py3-none-any.whl"
     "--ENV"                              = var.environment
   }
 }

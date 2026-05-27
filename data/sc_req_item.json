@@ -1,0 +1,32 @@
+[
+    {
+      "sys_id": "8a9f02b34f112110c7348ab18310c7a1",
+      "number": "RITM0054321",
+      "request": { "link": "https://instance.service-now.com/api/now/table/sc_request/9b8f02b34f112110c7348ab18310c7bc", "value": "REQ0011001" },
+      "cat_item": { "display_value": "Employee Onboarding Standard Bundle", "link": "https://instance.service-now.com/api/now/table/sc_cat_item/1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d", "value": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d" },
+      "requested_for": { "display_value": "Sarah Tan", "link": "https://instance.service-now.com/api/now/table/sys_user/55121a2b3c4d5e6f7a8b9c0d1e2f3a4b", "value": "55121a2b3c4d5e6f7a8b9c0d1e2f3a4b" },
+      "u_department": { "display_value": "Engineering", "value": "dept_eng_sg_01" },
+      "u_location": { "display_value": "Singapore", "value": "loc_sg_changi" },
+      "approval": "approved",
+      "stage": "fulfillment",
+      "state": "1",
+      "sys_created_on": "2026-05-20 01:00:00",
+      "sys_updated_on": "2026-05-22 06:30:00",
+      "sys_created_by": "hr.automation.system"
+    },
+    {
+      "sys_id": "3f2e1d0c4b5a6f7e8d9c0b1a2f3e4d5c",
+      "number": "RITM0054322",
+      "request": { "link": "https://instance.service-now.com/api/now/table/sc_request/2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a", "value": "REQ0011002" },
+      "cat_item": { "display_value": "Employee Onboarding Standard Bundle", "link": "https://instance.service-now.com/api/now/table/sc_cat_item/1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d", "value": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d" },
+      "requested_for": { "display_value": "Alex Wong", "link": "https://instance.service-now.com/api/now/table/sys_user/998877665544332211eeddccbbaa0099", "value": "998877665544332211eeddccbbaa0099" },
+      "u_department": { "display_value": "Data Platform", "value": "dept_data_sg_02" },
+      "u_location": { "display_value": "Singapore", "value": "loc_sg_changi" },
+      "approval": "approved",
+      "stage": "fulfillment",
+      "state": "1",
+      "sys_created_on": "2026-05-25 02:15:00",
+      "sys_updated_on": "2026-05-27 00:00:00",
+      "sys_created_by": "hr.automation.system"
+    }
+  ]

@@ -1,13 +1,13 @@
 resource "aws_s3_bucket" "raw_bucket" {
-  bucket = "sn-raw-data-sl-${var.environment}"
+  bucket = "sn-raw-data-tsl-${var.environment}"
 }
 
 resource "aws_s3_bucket" "bronze_bucket" {
-  bucket = "sn-bronze-data-sl-${var.environment}"
+  bucket = "sn-bronze-data-tsl-${var.environment}"
 }
 
 resource "aws_s3_bucket" "meta_bucket" {
-  bucket = "sn-meta-data-sl-${var.environment}"
+  bucket = "sn-meta-data-tsl-${var.environment}"
 }
 
 locals {

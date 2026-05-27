@@ -1,7 +1,1 @@
-{
-"sys_id": "INC0009581",
-"payload_metadata": {
-"display_value": "Network Outage - SGX Connection Failure",
-"operational_status": "Active"
-}
-}
+{"incident_id": "INC0012345", "assignment_group": "Data Platform Team", "short_description": "Clean landing validation record", "status": "In Progress", "sys_created_on": "2026-05-26 18:15:00"}

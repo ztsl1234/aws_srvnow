@@ -1,0 +1,7 @@
+[
+    { "name": "sc_task", "element": "state", "value": "1", "label": "Open" },
+    { "name": "sc_task", "element": "state", "value": "2", "label": "Work in Progress" },
+    { "name": "sc_task", "element": "state", "value": "3", "label": "Closed Complete" },
+    { "name": "sc_task", "element": "priority", "value": "1", "label": "1 - Critical" },
+    { "name": "sc_task", "element": "priority", "value": "2", "label": "2 - High" }
+  ]

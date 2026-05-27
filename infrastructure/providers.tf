@@ -3,15 +3,15 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 6.0" 
     }
   }
-  backend "s3" {
-    bucket         = "corporate-engineering-tf-state"
-    key            = "data-platform/state.tfstate"
-    region         = "ap-southeast-1"
-    dynamodb_table = "terraform-lock-table"
-  }
+  # backend "s3" {
+  # bucket         = "corporate-engineering-tf-state"
+  # key            = "data-platform/state.tfstate"
+  # region         = "ap-southeast-1"
+  # dynamodb_table = "terraform-lock-table"
+  #}
 }
 
 provider "aws" {
